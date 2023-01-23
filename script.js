@@ -5,8 +5,8 @@ a = 20;
 alert(a);
 
 //Задание 2
-let firstIphone = 2007;
-alert(`Год выпуска первого айфона: ${firstIphone}`);
+let yearFirstIphone = 2007;
+alert(`Год выпуска первого айфона: ${yearFirstIphone}`);
 
 //Задание 3
 let jsCreator = "Брендан Эйх или Айк";
@@ -21,7 +21,7 @@ alert(`${first} * ${second} = ${first * second}`);
 alert(`${first} / ${second} = ${first / second}`);
 
 //Задание 5
-result = 2**5;
+let result = 2**5;
 alert(`2^5 = ${result}`);
 
 //Задание 6
