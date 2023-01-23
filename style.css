@@ -84,4 +84,45 @@ body {
 }
 .gallery__item_3 {
   background-image: url(img/game_3.png);
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    height: 735px;
+    background-image: url(img/back_mobile.png);
+    background-position: unset;
+  }
+  .top__title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    padding-top: 238px;
+  }
+  .top__desc {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    width: unset;
+  }
+  .top__button {
+    display: flex;
+    justify-content: center;
+  }
+  .top__button_btn {
+    margin-top: 32px;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery__item {
+    border-radius: 16px;
+  }
+  .gallery__item > a {
+    left: 16px;
+    top: 242px;
+  }
 }/*# sourceMappingURL=style.css.map */

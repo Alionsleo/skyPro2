@@ -1,0 +1,40 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .top {
+        height: 735px;
+        background-image: url(img/back_mobile.png);
+        background-position: unset;
+        &__title {
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+            padding-top: 238px;
+        }
+        &__desc {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            width: unset;
+        }
+        &__button {
+            display: flex;
+            justify-content: center;
+            &_btn {
+                margin-top: 32px;
+            }
+        }
+    }
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        &__item {
+            border-radius: 16px;
+        }
+        &__item > a {
+            left: 16px;
+            top: 242px;
+        }
+    }
+}
