@@ -73,7 +73,7 @@ switch (monthNumber) {
 
 //Задание 7
 let check = Number(prompt('Пожалуйста, введите любое число'));
-if ( typeof check == 'number' ) {
+if ( !isNaN(check) ) {
     if ( check % 2 == 0) alert('Число четное');
     else alert('Число нечетное');
 }
