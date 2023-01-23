@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    height: 1024px;
+    background-image: url(img/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__title {
+        padding-top: 217px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+        color: #FFFFFF;
+    }
+    &__desc {
+        padding-top: 32px;
+        width: 481px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+    &__button {
+        &_btn {
+            width: 234px;
+            height: 49px;
+            background: #9C0332;
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+            margin-top: 44px;
+        }
+    }
+}
+
+.gallery {
+    padding-top: 128px;
+    padding-bottom: 128px;
+    background: #000915;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    &__item {
+        height: 300px;
+        grid-column: span 4;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &>a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #FFFFFF;
+            text-decoration: none;
+            position: relative;
+            left: 32px;
+            top: 236px;
+        }
+    }
+    &__item_1 {
+        background-image: url(img/game_1.png);
+    }
+    &__item_2 {
+        background-image: url(img/game_2.png);
+    }
+    &__item_3 {
+        background-image: url(img/game_3.png);
+    }
+      
+}
