@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-body {
+body, button {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -49,6 +49,11 @@ body {
   color: #FFFFFF;
   margin-top: 44px;
 }
+.top__button_btn:hover {
+  transform: scale(1.02);
+  border: #004980;
+  box-shadow: #004980 2px 2px 16px;
+}
 
 .gallery {
   padding-top: 128px;
@@ -64,6 +69,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 16px;
 }
 .gallery__item > a {
   font-style: normal;
@@ -75,6 +81,12 @@ body {
   position: relative;
   left: 32px;
   top: 236px;
+}
+.gallery__item:hover {
+  transform: scale(1.02);
+  border: #004980;
+  box-shadow: #004980 2px 2px 16px;
+  border-radius: 16px;
 }
 .gallery__item_1 {
   background-image: url(img/game_1.png);
