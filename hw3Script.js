@@ -31,41 +31,25 @@ alert(a + b);
 //Задание 5
 let monthNumber = 12;
 switch (monthNumber) {
-    case "1":
-        console.log("Январь");
+    case 1:
+    case 2:
+    case 12:
+        console.log("Зима");
         break;
-    case "2":
-        console.log("Февраль");
+    case 3:
+    case 4:
+    case 5:
+        console.log("Весна");
         break;
-    case "3":
-        console.log("Март");
+    case 6:
+    case 7:
+    case 8:
+        console.log("Лето");
         break;
-    case "4":
-        console.log("Апрель");
-        break;
-    case "5":
-        console.log("Май");
-        break;
-    case "6":
-        console.log("Июнь");
-        break;
-    case "7":
-        console.log("Июль");
-        break;
-    case "8":
-        console.log("Август");
-        break;
-    case "9":
-        console.log("Сентябрь");
-        break;
-    case "10":
-        console.log("Октябрь");
-        break;
-    case "11":
-        console.log("Ноябрь");
-        break;
-    case "12":
-        console.log("Декабрь");
+    case 9:
+    case 10:
+    case 11:
+        console.log("Осень");
         break;
     default: 
         break;
