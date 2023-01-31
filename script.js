@@ -1,4 +1,4 @@
-//Задание 1
+/*//Задание 1
 let a = 10;
 alert(a);
 a = 20;
@@ -66,3 +66,48 @@ alert(user[info]);
 //Задание 10
 let nameUser = prompt('Как вас зовут?');
 alert(`Привет, ${nameUser}`);
+
+*/
+
+//Задание 1
+for(let i = 0; i < 2; i++) {
+    console.log('Привет');
+}
+
+//Задание 2
+for(let i = 2; i <= 5; i++) {
+    console.log(i);
+}
+
+//Задание 3
+for(let i = 7; i <= 22; i++) {
+    console.log(i);
+}
+
+//Задание 4
+const obj = {
+    "Коля": '200',
+    "Вася": '300',
+    "Петя": '400'
+};
+for (const objItem in obj) {
+    console.log(`${objItem}  — зарплата ${obj[objItem]} долларов.`)
+}
+
+//Задание 5
+let num = 0;
+let n = 1000;
+while(n > 50) {
+    n /= 2;
+    num++;
+}
+console.log(`Получится число ${n}`);
+console.log(`Количество необходимых итераций: ${num}`);
+
+//Задание 6
+let firstFriday = 6;
+
+for(let i = firstFriday; i <= 31; i+=7) {
+    console.log(`Сегодня пятница ${i}-е число`);
+} 
+
