@@ -42,9 +42,7 @@ for(let i = 0; i < mass1.length; i++) {
 
 //Задание 2
 const mass2 = [1, 5, 4, 10, 0, 3];
-console.log(mass2.indexOf(4));
-
-console.log(`Позиция 4 в массиве ${mass2} - ${key}`);
+console.log(`Позиция 4 в массиве ${mass2} - ${mass2.indexOf(4)}`);
 
 //Задание 3
 let mass3 = [1, 3, 5, 10, 20];
@@ -59,6 +57,7 @@ for(i = 0; i < 10; i++) {
 }
 console.log(`Начальный массив ${mass4.join(' ')}`);
 console.log(`Массив четных чисел начального ${mass4Honest}`);
+
 //Задание 5
 let mass = [];
 for(let i = 0; i < 3; i++) {
@@ -67,9 +66,11 @@ for(let i = 0; i < 3; i++) {
     mass[i][j] = 1;
 }
 console.log(mass);
+
 //Задание 6
 let mass6 = [1, 1, 1];
-console.log(mass6.push(2, 2, 2));
+mass6.push(2, 2, 2);
+console.log(mass6);
 
 //Задание 7
 let mass7 = [9, 8, 7, 'a', 6, 5];
@@ -77,7 +78,7 @@ mass7 = mass7.sort();
 mass7.pop();
 console.log(mass7);
 
-//Задание 8 //демо forEach, но можно проще
+//Задание 8 
 const mass8 = [9, 8, 7, 6, 5];
 let check = +prompt(`Введите число от 1 до 10`);
 let res = false;
@@ -85,7 +86,8 @@ if(!isNaN(check) && check >= 1 && check <= 10) {
     res = mass8.includes(check);
 }
 if(res) console.log(`Число ${check} содержится в массиве [${mass8.join(', ')}]`);
-else console.log(`Число ${check} не содержится в массиве [${mass8.join(', ')}]`)
+else console.log(`Число ${check} не содержится в массиве [${mass8.join(', ')}]`);
+
 //Задание 9
 let str = 'abcdef'.split('').reverse().join('');
 
@@ -107,7 +109,7 @@ console.log(`[${mass11.flat().join(', ')}]`);
 
 //Задание 12 //сделала обход одним циклом
 let mass12 = [];
-const count = 6;
+const count = 15;
 for(let i = 0; i < count; i++) {
     mass12.push(1 + Math.floor(Math.random() * 10));
     if(i > 0 && i <= count - 1) console.log(`Сумма ${i-1}-го и ${i}-го элементов равна ${mass12[i-1] + mass12[i]}`);
