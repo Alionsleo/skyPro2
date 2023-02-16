@@ -1,172 +1,5 @@
-/*//Задание 1
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
 
-//Задание 2
-let yearFirstIphone = 2007;
-alert(`Год выпуска первого айфона: ${yearFirstIphone}`);
-
-//Задание 3
-let jsCreator = "Брендан Эйх или Айк";
-alert(`Создатель языка JavaScript: ${jsCreator}`);
-
-//Задание 4
-let first = 10;
-let second = 2;
-alert(`${first} + ${second} = ${first + second}`);
-alert(`${first} - ${second} = ${first - second}`);
-alert(`${first} * ${second} = ${first * second}`);
-alert(`${first} / ${second} = ${first / second}`);
-
-//Задание 5
-let result = 2**5;
-alert(`2^5 = ${result}`);
-
-//Задание 6
-let A = 9;
-let B = 2;
-alert(`Остаток от деления ${A} на ${B} = ${A % B}`)
-
-//Задание 7
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num++;
-num--;
-alert(num);
-
-//Задание 8
-let age = prompt('Сколько вам лет?');
-alert(age);
-
-//Задание 9.0
-let user = {
-    name: "Тарас",
-    age: 23,
-    idAdmin: true
-};
-
-//Задание 9.1
-user['city of residence'] = 'New-York';
-
-//Задание 9.2
-user.age = 24;
-
-//Задание 9.3
-delete user['city of residence'];
-
-//Задание 9.4
-let info = prompt('Какую информацию хотите узнать о пользователе?');
-alert(user[info]);
-
-//Задание 10
-let nameUser = prompt('Как вас зовут?');
-alert(`Привет, ${nameUser}`);
-
-
-
-//Задание 1
-for(let i = 0; i < 2; i++) {
-    console.log('Привет');
-}
-
-//Задание 2
-for(let i = 2; i <= 5; i++) {
-    console.log(i);
-}
-
-//Задание 3
-for(let i = 7; i <= 22; i++) {
-    console.log(i);
-}
-
-//Задание 4
-const obj = {
-    "Коля": '200',
-    "Вася": '300',
-    "Петя": '400'
-};
-for (const objItem in obj) {
-    console.log(`${objItem}  — зарплата ${obj[objItem]} долларов.`)
-}
-
-//Задание 5
-let num = 0;
-let n = 1000;
-while(n > 50) {
-    n /= 2;
-    num++;
-}
-console.log(`Получится число ${n}`);
-console.log(`Количество необходимых итераций: ${num}`);
-
-//Задание 6
-let firstFriday = 6;
-
-for(let i = firstFriday; i <= 31; i+=7) {
-    console.log(`Сегодня пятница ${i}-е число`);
-} 
-*/
-//Урок 5
-//Задание 1
-const returnLess = (a, b) => {
-    return (a > b) ? b : a;
-};
-
-console.log(`Меньшее из двух чисел 5 и 2: ${returnLess(5, 2)}`);
-
-//Задание 2
-const evenNumber = (a) => {
-    return a % 2 === 0 ? 'число четное' : 'число нечетное'; 
-};
-
-console.log(`7 - ${evenNumber(7)}`);
-
-//Задание 3
-const printSquareNumber = (a) => console.log(`Печатаем квадрат числа ${a}: ${a**2}`);
-const returnSquareNumber = (a) => {
-    return a ** 2;
-};
-
-printSquareNumber(3);
-console.log(`Возвращаем квадрат числа 5: ${returnSquareNumber(5)}`);
-
-//Задание 4
-const getUserOld = () => {
-    let old = +prompt('Сколько Вам лет?');
-    if(old < 0) alert('Вы ввели неправильное значение.');
-    else if(old >= 0 && old <= 12) alert('Привет, друг!');
-    else if(old >= 13) alert('Добро пожаловать!')
-}
-
-getUserOld();
-
-//Задание 5
-const checkNumbers = () => {
-    let firstNum = +prompt('Введите первое число');
-    let secondNum = +prompt('Введите второе число');
-    if(!isNaN(firstNum * secondNum)) return `${firstNum} * ${secondNum} = ${firstNum * secondNum}`;
-    else return 'Одно или оба значения не являются числом';
-}
-
-console.log(checkNumbers());
-
-//Задание 6
-const userSquareNumber = (a) => {
-    if(isNaN(a)) return 'Переданный параметр не является числом';
-    else return `${a} в кубе равняется ${a ** 2}`;
-}
-
-console.log(userSquareNumber('sdfsd'));//пример для не числа
-for(let i = 0; i < 11; i++) {
-    console.log(userSquareNumber(i));
-}
-
-//Задание 7
+//Задание 2.5#7
 const gameSeasons = () => {
     let month = +prompt('Введите число от 1 до 12');
     if(isNaN(month)) alert('Введено неверное значение');
@@ -198,3 +31,87 @@ const gameSeasons = () => {
         }
     }
 }
+//Курс 2.6
+//Задание 1
+const mass1 = [1, 5, 4, 10, 0, 3];
+
+for(let i = 0; i < mass1.length; i++) {
+    console.log(mass1[i]);
+    if(mass1[i] === 10) break;
+}
+
+//Задание 2
+const mass2 = [1, 5, 4, 10, 0, 3];
+console.log(`Позиция 4 в массиве ${mass2} - ${mass2.indexOf(4)}`);
+
+//Задание 3
+let mass3 = [1, 3, 5, 10, 20];
+console.log(mass3.join(' '));
+
+//Задание 4
+let mass4 = [];
+let mass4Honest = [];
+for(i = 0; i < 10; i++) {
+    mass4.push(Math.floor(Math.random() * 10));
+    if(mass4[i] % 2 == 0) mass4Honest.push(mass4[i]);
+}
+console.log(`Начальный массив ${mass4.join(' ')}`);
+console.log(`Массив четных чисел начального ${mass4Honest}`);
+
+//Задание 5
+let mass = [];
+for(let i = 0; i < 3; i++) {
+    mass[i] = [];
+    for(let j = 0; j < 3; j ++) 
+    mass[i][j] = 1;
+}
+console.log(mass);
+
+//Задание 6
+let mass6 = [1, 1, 1];
+mass6.push(2, 2, 2);
+console.log(mass6);
+
+//Задание 7
+let mass7 = [9, 8, 7, 'a', 6, 5];
+mass7 = mass7.sort();
+mass7.pop();
+console.log(mass7);
+
+//Задание 8 
+const mass8 = [9, 8, 7, 6, 5];
+let check = +prompt(`Введите число от 1 до 10`);
+let res = false;
+if(!isNaN(check) && check >= 1 && check <= 10) {
+    res = mass8.includes(check);
+}
+if(res) console.log(`Число ${check} содержится в массиве [${mass8.join(', ')}]`);
+else console.log(`Число ${check} не содержится в массиве [${mass8.join(', ')}]`);
+
+//Задание 9
+let str = 'abcdef'.split('').reverse().join('');
+
+console.log(str);
+
+//Задание 10
+let mass10 = [];
+let sum = 0;
+for(let i = 0; i < 6; i++) {
+    mass10.push(Math.floor(1 + Math.random() * 10));
+    sum += mass10[i];
+}
+sum /= mass10.length;
+console.log(`Среднее арифметическое чисел [${mass10.join(', ')}] = ${sum}`);
+
+//Задание 11
+let mass11 = [[1, 2, 3,],[4, 5, 6]];
+console.log(`[${mass11.flat().join(', ')}]`);
+
+//Задание 12 //сделала обход одним циклом
+let mass12 = [];
+const count = 15;
+for(let i = 0; i < count; i++) {
+    mass12.push(1 + Math.floor(Math.random() * 10));
+    if(i > 0 && i <= count - 1) console.log(`Сумма ${i-1}-го и ${i}-го элементов равна ${mass12[i-1] + mass12[i]}`);
+}
+console.log(`Начальный массив [${mass12.join(', ')}]`);
