@@ -18,11 +18,11 @@
         </div>
     </section>
     <section class="gallery center">
-        <div class="gallery__item gallery__item_1"><a href="#">Игра 1</a></div>
-        <div class="gallery__item gallery__item_2"><a href="#">Игра 2</a></div>
+        <div class="gallery__item gallery__item_1"><a href="#game_seasons">Игра 1</a></div>
+        <div class="gallery__item gallery__item_2"><a href="#game_word">Игра 2</a></div>
         <div class="gallery__item gallery__item_3"><a href="#">Игра 3</a></div>
     </section>
-    <section class="game center">
+    <section class="game center" id="game_seasons">
         <div class="game__info">
             <div class="game__info_title">Времена года!</div>
             <div class="game__info_desc">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому времени года он относится</div>
@@ -30,6 +30,16 @@
         </div>
         <div class="game__pict">
             <img src="img/game.png" alt="game">
+        </div>
+    </section>
+    <section class="game center" id="game_word">
+        <div class="game__pict">
+            <img src="img/game_word.png" alt="game">
+        </div>
+        <div class="game__info">
+            <div class="game__info_title">Запомни слова</div>
+            <div class="game__info_desc">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</div>
+            <button class="game__info_button" onclick="gameWord();">Играть!</button>
         </div>
     </section>
     <script src="script.js"></script>
