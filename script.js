@@ -116,7 +116,7 @@ const gameSeasons = () => {
 // }
 // console.log(`Начальный массив [${mass12.join(', ')}]`);
 
-//курс 2.7
+/*//курс 2.7
 //задание 1
 let str = 'Привести к верхнему регистру';
 console.log(str.toUpperCase());
@@ -198,7 +198,7 @@ const getRussianDate = (curDate) => {
     date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 }
 
-console.log(getRussianDate(new Date()));
+console.log(getRussianDate(new Date()));*/
 
 //задание 11
 const gameWord = () => {
@@ -213,3 +213,94 @@ const gameWord = () => {
         alert("Вы были близки к победе!");
     else alert("Вы ответили неверно :(");
 };
+
+//Курс 2.8
+//Задание 1
+const mult = (a, b) => {
+    return a * b;
+}
+const sum = (a, b) => {
+    return a + b;
+}
+
+const getResult = (a, func) => {
+    return a.reduce(func);
+}
+
+console.log(getResult([1, 3, 5, 6], mult))
+console.log(getResult([1, 3, 5, 6], sum))
+
+//задание 2
+const users = [
+    {name: 'Jon', age: 22},
+    {name: 'Richard', age: 18},
+    {name: 'Anton', age: 32},
+    {name: 'Lida', age: 23},
+    {name: 'Bob', age: 44}
+];
+
+const compareFunction = (a, b) => {
+    if (a.age > b.age) return 1;
+    if (a.age < b.age) return -1;
+    return 0;
+}
+
+users.sort(compareFunction);
+console.log(users);
+
+//задание 3
+const  reversArr = (arr) => {
+    return arr.reverse();
+}
+
+const toNumArr = (arr) => {
+    temp = [];
+    arr.forEach(el => {
+        if(!isNaN(el)) {
+            temp.push(Number(el));
+        }
+    });
+    return temp;
+}
+
+const each = (arr, func) => {
+    return func(arr);
+}
+
+console.log(each([34, 54, 'ere'], reversArr));
+console.log(each([1, '4', false, 9, 'two'], toNumArr));
+
+//задание 4
+const timer = (deadline, int = 1) => {
+    const interval = setInterval(() => {
+        nowDate = new Date();
+        console.log(nowDate);
+    }, int * 1000);
+
+
+    setTimeout(() => {
+        clearInterval(interval);
+        console.log(`${deadline} секунд прошло`)
+    }, deadline * 1000)
+};
+
+timer(30, 3);
+
+//задание 5
+function calling() {
+    console.log('Звоню!')
+};
+
+function beeps(callback) {
+    setTimeout(() => {
+        console.log('Идут гудки...');
+        callback();
+    }, 1000);
+}
+
+function talk() {
+    console.log('Разговор')
+}
+
+calling();
+beeps(talk);
